@@ -50,6 +50,20 @@
         ],
         "description": "php echo"
     },
+    "php wp_query": {
+        "prefix": "phpquery",
+        "body": [
+            "<?php", "\t \\$query = new WP_query(",
+            "\t\tarray(",
+            "\t\t\t'post_type'      => '$1',",
+            "\t\t\t'post_status'      => 'publish',",
+            "\t\t\t'posts_per_page'      => '-1',",
+            "\t\t)",
+            "\t);",
+            "?>"
+        ],
+        "description": "php esc php"
+    },
     "php image": {
         "prefix": "phpimg",
         "body": [
@@ -64,4 +78,25 @@
         ],
         "description": "php esc php"
     },
+    "php new page": {
+        "prefix": "newphp",
+        "body": [
+            "<?php",
+            "\t/**",
+            "\t*",
+            "\t*",
+            "\t* The Pack - Digital Agency",
+            "\t* https://the-pack.nl",
+            "\t* Kyle Bot - kyle@the-pack.nl",
+            "\t*/",
+            "\t",
+            "\t// Exit if accessed directly.",
+            "\tdefined('ABSPATH') || exit;",
+            "?>",
+            "\t",
+            "$0"
+        ],
+        "description": "php esc php"
+    },
+
 }
